@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import { createAction, handleActions } from "redux-actions";
+import produce from "immer";
+
+const CHANGE_INPUT = "todos/CHANGE_INPUT"; // 인풋 값을 변경함
+const INSERT = "todos/INSERT"; // 새로운 todo 를 등록함
+const TOGGLE = "todos/TOGGLE"; // todo 를 체크/체크해제 함
+const REMOVE = "todos/REMOVE"; // todo 를 제거함
+=======
 import { createAction, handleActions } from 'redux-actions';
 import produce from 'immer';
 
@@ -5,6 +14,7 @@ const CHANGE_INPUT = 'todos/CHANGE_INPUT'; // 인풋 값을 변경함
 const INSERT = 'todos/INSERT'; // 새로운 todo 를 등록함
 const TOGGLE = 'todos/TOGGLE'; // todo 를 체크/체크해제 함
 const REMOVE = 'todos/REMOVE'; // todo 를 제거함
+>>>>>>> fb3663af61fe4bc68e9ade0dcbe1ca1a576b8adb
 
 export const changeInput = createAction(CHANGE_INPUT, (input) => input);
 
@@ -19,16 +29,28 @@ export const toggle = createAction(TOGGLE, (id) => id);
 export const remove = createAction(REMOVE, (id) => id);
 
 const initialState = {
+<<<<<<< HEAD
+  input: "",
+  todos: [
+    {
+      id: 1,
+      text: "개발로 성공하자",
+=======
   input: '',
   todos: [
     {
       id: 1,
       text: '개발로 성공하자',
+>>>>>>> fb3663af61fe4bc68e9ade0dcbe1ca1a576b8adb
       done: false,
     },
     {
       id: 2,
+<<<<<<< HEAD
+      text: "개발을 성실하게",
+=======
       text: '개발을 성실하게',
+>>>>>>> fb3663af61fe4bc68e9ade0dcbe1ca1a576b8adb
       done: false,
     },
   ],
@@ -57,5 +79,9 @@ const todos = handleActions(
   },
   initialState
 );
+<<<<<<< HEAD
+//주석수정
+=======
 
+>>>>>>> fb3663af61fe4bc68e9ade0dcbe1ca1a576b8adb
 export default todos;
